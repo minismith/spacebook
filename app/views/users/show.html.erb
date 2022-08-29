@@ -13,7 +13,7 @@
     <div class="space-card">
         <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
         <div class="space-card-infos">
-          <h2><%= @space.name %></h2>
+          <h2><%= link_to space.name, space_path(space) %></h2>
         </div>
     </div>
   <div>
