@@ -1,6 +1,10 @@
+
+
 .navbar-lewagon {
   justify-content: space-between;
   background: white;
+  position: sticky;
+  height: 125px;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -8,11 +12,23 @@
 }
 
 .navbar-lewagon .navbar-brand img {
+  position: relative;
   width: 220px;
+  display: flex;
 }
 
 .nav-item {
   display: flex;
   align-content: flex-end;
   padding-right: 20px;
+}
+
+.dropdown-item:hover {
+  background-color: rgb(244, 244, 244);
+  transition: 0.5s;
+}
+
+.nav-item img {
+  height: 50px;
+  width: 50px;
 }
