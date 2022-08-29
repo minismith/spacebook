@@ -2,7 +2,7 @@
 
   <h1>List your space</h1>
 
-  <%= simple_form_for @space do |f| %>
+  <%= simple_form_for [@user, @space] do |f| %>
     <%= f.input :name, hint: 'Go on, sell it to us...' %>
     <%= f.input :address %>
     <%= f.input :description, hint: 'Include everything that makes your space stand out!' %>
