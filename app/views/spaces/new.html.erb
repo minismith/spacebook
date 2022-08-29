@@ -7,6 +7,7 @@
     <%= f.input :address %>
     <%= f.input :description, hint: 'Include everything that makes your space stand out!' %>
     <%= f.input :price_per_day, label: 'Price per day (in £)' %>
+    <%= f.input :photos, as: :file, input_html: { multiple: true, name: "space_attachments[photos][]" } %>
     <%= f.button :submit, class: 'btn-outline-dark' %>
   <% end %>
 
