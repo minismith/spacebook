@@ -11,6 +11,7 @@
     </div>
     <div class="spaces-index">
       <% @spaces.each do |space|%>
+      <%= link_to space_path(space) do %>
       <div class="space-card">
         <div class="space-card-image">
           <% space.photos.each do |photo| %>
@@ -26,6 +27,7 @@
           </div>
         </div>
       </div>
+      <% end %>
       <% end %>
     <div>
   <div>
