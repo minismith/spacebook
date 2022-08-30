@@ -8,6 +8,10 @@ class SpacesController < ApplicationController
     @user = User.find(params[:user_id])
   end
 
+  def show
+    @space = Space.find(params[:id])
+  end
+
   def create
     @space = Space.new(space_params)
     @user = User.find(params[:user_id])
@@ -23,6 +27,6 @@ class SpacesController < ApplicationController
   private
 
   def space_params
-    params.require(:space).permit(:name, :address, :price_per_day, :description, :photos => [])
+    params.require(:space).permit(:name, :address, :price_per_day, :description, photos: [])
   end
 end

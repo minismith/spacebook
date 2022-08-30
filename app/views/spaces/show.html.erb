@@ -1,0 +1,15 @@
+<div class="container">
+
+  <h1><%= @space.name %></h1>
+
+   <% @space.photos.each do |photo| %>
+    <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+  <% end %>
+
+  <p>Description: <%= @space.description %> </p>
+
+  <p>£<%=@space.price_per_day%> per day</p>
+
+  <%# <%= cl_image_tag @space.photos.first.key %> %>
+
+</div>
