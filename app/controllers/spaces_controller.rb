@@ -1,5 +1,5 @@
 class SpacesController < ApplicationController
-  before_action :set_space, only: [:show, :edit, :update, :destroy]
+  before_action :set_space, only: %i[show edit update destroy]
   def index
     @spaces = Space.all
   end
@@ -16,11 +16,12 @@ class SpacesController < ApplicationController
   def edit
   end
 
-  # def destroy
-  #   @user = @space.user
-  #   @space.destroy
-  #   redirect_to user_path(@user)
-  # end
+  def destroy
+    @user = @space.user
+    @space.destroy
+
+    redirect_to user_path(@user), status: :see_other
+  end
 
   def update
     @space.update(space_params)
