@@ -8,15 +8,15 @@
       <%= link_to "List a new space", new_user_space_path(@user) %>
     </div>
   </div>
-  <div class="spaces-index">
-  <% @spaces.each do |space|%>
-    <div class="space-card">
-        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-        <div class="space-card-infos">
-          <h2><%= link_to space.name, space_path(space) %></h2>
-        </div>
-    </div>
-  <div>
-  <% end %>
 
+    <div class="spaces-index">
+    <% @spaces.each do |space|%>
+      <div class="space-card">
+          <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+          <div class="space-card-infos">
+            <h2><%= link_to space.name, space_path(space) %></h2>
+          </div>
+      </div>
+    <div>
+    <% end %>
 </div>
