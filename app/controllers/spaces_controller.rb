@@ -10,14 +10,16 @@ class SpacesController < ApplicationController
   end
 
   def show
+    @user = @space.user
   end
 
   def edit
   end
 
   def destroy
-    raise
-    @user = User.where(id: params[:id])
+    @user = @space.user
+    @space.destroy
+    redirect_to user_path(@user)
   end
 
   def update
