@@ -1,0 +1,13 @@
+<div class="container">
+  <h1>Edit your listing</h1>
+
+  <%= simple_form_for [@space] do |f| %>
+    <%= f.input :name, hint: 'Go on, sell it to us...' %>
+    <%= f.input :address %>
+    <%= f.input :description, hint: 'Include everything that makes your space stand out!' %>
+    <%= f.input :price_per_day, label: 'Price per day (in £)' %>
+    <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+    <%= f.button :submit, 'Confirm update', class: 'btn-outline-dark' %>
+  <% end %>
+
+</div>
