@@ -1,32 +1,34 @@
-<div class="container">
-  <div class="title">
-    <h1>Hello, <%= @user.first_name %></h1>
-  </div>
-  <div class="spaces_title">
-    <h4>Your spaces</h4>
-    <div class="btn btn-ghost">
-      <%= link_to "List a new space", new_user_space_path(@user) %>
-    </div>
-  </div>
+<div class="footer_container">
+  <div class="container">
+      <div class="title">
+        <h1>Hello, <%= @user.first_name %></h1>
+      </div>
+    <div class="spaces-index">
+      <div class="spaces_title">
+        <h4>Your spaces</h4>
+        <div class="btn btn-ghost">
+          <%= link_to "List a new space", new_user_space_path(@user) %>
+        </div>
+      </div>
 
-  <div class="spaces-index">
-    <% @spaces.each do |space|%>
-    <div class="space-card">
-      <div class="space-card-image">
-        <% space.photos.each do |photo| %>
-          <%= cl_image_tag photo.key %>
-        <% end %>
-      </div>
-      <div class="space-card-infos">
-        <div>
-          <h2><%= space.name %></h2>
+      <% @spaces.each do |space|%>
+      <div class="space-card">
+        <div class="space-card-image">
+          <% space.photos.each do |photo| %>
+            <%= cl_image_tag photo.key %>
+          <% end %>
         </div>
-        <div>
-          <h2 class="space-card-pricing">£<%= space.price_per_day %></h2>
+        <div class="space-card-infos">
+          <div>
+            <h2><%= space.name %></h2>
+          </div>
+          <div>
+            <h2 class="space-card-pricing">£<%= space.price_per_day %></h2>
+          </div>
         </div>
       </div>
-    </div>
+      <% end %>
+    <div>
+
   <div>
-  <% end %>
-
 </div>
