@@ -16,11 +16,11 @@ class SpacesController < ApplicationController
   def edit
   end
 
-  def destroy
-    @user = @space.user
-    @space.destroy
-    redirect_to user_path(@user)
-  end
+  # def destroy
+  #   @user = @space.user
+  #   @space.destroy
+  #   redirect_to user_path(@user)
+  # end
 
   def update
     @space.update(space_params)
