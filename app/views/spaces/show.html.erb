@@ -25,17 +25,31 @@
 
   </div>
 
-  <div class="booking-box border col-3 p-3">
-    <h3>Book this flat</h3>
-    <p>This will be a form displaying the booking options for the customer</p>
+  <div class="booking-box col-3 p-3">
+    <h4>Book this space:</h4>
+    <div class="booking-form border p-2">
+      <%= form_with url: "/", method: :get do |form| %>
+      <%= form.label :message, "Message:", placeholder: "This is a dummy form for now" %>
+      <%= form.text_field :message, class: "mb-2 p-3" %>
+      <%= form.label :arrival, "Arrival date" %>
+      <%= form.date_field :arrival, class: "mb-2" %>
+      <%= form.label :departure, "Departure date" %>
+      <%= form.date_field :departure, class: "mb-3" %>
+      <%= form.submit "Request to book" %>
+      <% end %>
+    </div>
   </div>
 
 </div>
 
   <h2><%= @space.name %></h2>
 
-  <p><%= @space.description %> </p>
+  <div class="description pb-4">
 
-  <p>Price per day: £<%=@space.price_per_day.to_i%></p>
+    <p><%= @space.description %> </p>
+
+  </div>
+
+  <p><strong>Price per day:</strong> £<%=@space.price_per_day.to_i%></p>
 
 </div>
