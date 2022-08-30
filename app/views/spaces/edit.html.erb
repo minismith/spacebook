@@ -6,7 +6,11 @@
     <%= f.input :address %>
     <%= f.input :description, hint: 'Include everything that makes your space stand out!' %>
     <%= f.input :price_per_day, label: 'Price per day (in £)' %>
-    <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+    <% if @space.photos.attached? %>
+      <% @space.photos.each do |ph| %>
+        <%= f.hidden_field :photos, value: ph.signed_id %>
+      <% end %>
+    <% end %>
     <%= f.button :submit, 'Confirm update', class: 'btn-outline-dark' %>
   <% end %>
 
