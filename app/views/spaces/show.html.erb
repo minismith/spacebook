@@ -1,15 +1,32 @@
 <div class="container">
 
-  <h1><%= @space.name %></h1>
+  <div id="carouselExampleIndicators" class="carousel slide mb-3 rounded" data-bs-ride="true">
 
-   <% @space.photos.each do |photo| %>
-    <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
-  <% end %>
+    <div class="carousel-inner">
+      <% @space.photos.each do |photo| %>
 
-  <p>Description: <%= @space.description %> </p>
+        <div class="carousel-item active">
+          <%= cl_image_tag photo.key, class: "d-block w-100" %>
+        </div>
 
-  <p>£<%=@space.price_per_day%> per day</p>
+      <% end %>
+    </div>
 
-  <%# <%= cl_image_tag @space.photos.first.key %> %>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+
+  </div>
+
+  <h2><%= @space.name %></h2>
+
+  <p><%= @space.description %> </p>
+
+  <p>Price per day: £<%=@space.price_per_day.to_i%></p>
 
 </div>
