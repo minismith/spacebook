@@ -50,5 +50,6 @@
 .spaces-index {
   margin: 20px;
   display: flex;
-  column-width: 6;
+  border: 2px solid red;
+  justify-content: space-evenly;
 }
