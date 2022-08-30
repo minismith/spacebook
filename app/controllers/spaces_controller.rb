@@ -34,7 +34,7 @@ class SpacesController < ApplicationController
     @space.user = @user
 
     if @space.save
-      redirect_to @user, notice: 'Listing was successfully created.'
+      redirect_to @user
     else
       render :new, status: :unprocessableentity
     end
