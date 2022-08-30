@@ -8,6 +8,10 @@ class SpacesController < ApplicationController
     @user = User.find(params[:user_id])
   end
 
+  def show
+    @space = Space.find(params[:id])
+  end
+
   def create
     @space = Space.new(space_params)
     @user = User.find(params[:user_id])
