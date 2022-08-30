@@ -3,14 +3,13 @@
       <div class="title">
         <h1>Hello, <%= @user.first_name %></h1>
       </div>
-    <div class="spaces-index">
       <div class="spaces_title">
-        <h4>Your spaces</h4>
-        <div class="btn btn-ghost">
-          <%= link_to "List a new space", new_user_space_path(@user) %>
-        </div>
+      <h4>Your spaces</h4>
+      <div class="btn btn-ghost">
+        <%= link_to "List a new space", new_user_space_path(@user) %>
       </div>
-
+    </div>
+    <div class="spaces-index">
       <% @spaces.each do |space|%>
       <div class="space-card">
         <div class="space-card-image">
