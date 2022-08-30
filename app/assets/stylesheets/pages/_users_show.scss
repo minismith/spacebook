@@ -1,7 +1,3 @@
-.footer_container {
-  width: 100%;
-}
-
 .container {
   background-color: white;
   height: 1000px;
@@ -49,8 +45,8 @@
 
 .spaces-index {
   margin: 20px;
-  display: flex;
   column-width: 6;
+  display: flex;
 
   a {
     text-decoration: none;

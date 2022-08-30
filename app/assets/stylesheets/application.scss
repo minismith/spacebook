@@ -12,3 +12,11 @@
 @import "pages/index";
 @import "pages/users_show";
 @import "pages/spaces_show";
+
+html {
+  min-height: 100%;
+  overflow-y: scroll;
+}
+body {
+   min-height: 100%;
+}
