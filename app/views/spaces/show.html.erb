@@ -5,10 +5,10 @@
   <div id="carouselExampleIndicators" class="carousel slide mb-3 rounded col-9" data-bs-ride="true">
 
     <div class="carousel-inner">
-      <% @space.photos.each do |photo| %>
+      <% @space.photos.each_with_index do |photo, i| %>
 
-        <div class="carousel-item active">
-          <%= cl_image_tag photo.key, class: "d-block w-100" %>
+        <div class="carousel-item <%= "active" if i==0 %>">
+          <%= cl_image_tag photo.key, class: "d-block w-100 h-80" %>
         </div>
 
       <% end %>
