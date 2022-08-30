@@ -27,14 +27,11 @@
     <div class="booking-box col-3 p-3">
       <h4>Book this space:</h4>
       <div class="booking-form border p-2">
-        <%= form_with url: "/", method: :get do |form| %>
-        <%= form.label :message, "Message:" %>
-        <%= form.text_field :message, class: "mb-2 p-3" %>
-        <%= form.label :arrival, "Arrival date" %>
-        <%= form.date_field :arrival, class: "mb-2" %>
-        <%= form.label :departure, "Departure date" %>
-        <%= form.date_field :departure, class: "mb-3" %>
-        <%= form.submit "Request to book" %>
+        <%= simple_form_for [@user, @space, @booking] do |f| %>
+        <%= f.input :message %>
+        <%= f.input :booking_start %>
+        <%= f.input :booking_end %>
+        <%= f.button :submit, class: 'btn-outline-dark' %>
         <% end %>
       </div>
     </div>
