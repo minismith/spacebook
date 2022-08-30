@@ -28,7 +28,7 @@
       <h4>Book this space:</h4>
       <div class="booking-form border p-2">
         <%= form_with url: "/", method: :get do |form| %>
-        <%= form.label :message, "Message:", placeholder: "This is a dummy form for now" %>
+        <%= form.label :message, "Message:" %>
         <%= form.text_field :message, class: "mb-2 p-3" %>
         <%= form.label :arrival, "Arrival date" %>
         <%= form.date_field :arrival, class: "mb-2" %>
@@ -43,15 +43,13 @@
 
   <h2><%= @space.name %></h2>
 
-  <%= link_to "Edit this space", edit_space_path(@space), class: "btn btn-outline-dark" %>
-
-  <div class="description pb-4">
+  <div class="description pb-2">
     <p><%= @space.description %> </p>
   </div>
 
   <p><strong>Price per day:</strong> £<%=@space.price_per_day.to_i%></p>
 
-
-  <%# <%= link_to "Delete this space", user_path(@user), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-outline-dark" %>
+  <%= link_to "Edit this space", edit_space_path(@space), class: "btn btn-outline-dark" %>
+  <%= link_to "Delete this space", space_path(@space), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-outline-dark" %>
 
 </div>
