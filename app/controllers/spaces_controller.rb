@@ -5,15 +5,16 @@ class SpacesController < ApplicationController
 
   def new
     @space = Space.new
+    @user = User.find(params[:user_id])
   end
 
   def create
     @space = Space.new(space_params)
-    @user = User.find(:user_id)
+    @user = User.find(params[:user_id])
     @space.user = @user
 
     if @space.save
-      redirect_to user_path(@user)
+      redirect_to @user, notice: 'Listing was successfully created.'
     else
       render :new, status: :unprocessableentity
     end
@@ -22,6 +23,6 @@ class SpacesController < ApplicationController
   private
 
   def space_params
-    params.require(:space).permit(:name, :address, :price_per_day, :description)
+    params.require(:space).permit(:name, :address, :price_per_day, :description, :photos => [])
   end
 end
