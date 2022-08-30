@@ -5,6 +5,7 @@
   width: 300px;
   height: 250px;
   margin: 20px;
+  text-decoration: none;
 }
 
 .space-card-image img {
@@ -18,12 +19,14 @@
   font-size: 16px;
   font-weight: bold;
   margin: 0;
+  text-decoration: none;
 }
 
 .space-card p {
   font-size: 12px;
   opacity: .7;
   margin: 0;
+  text-decoration: none;
 }
 
 
@@ -33,4 +36,13 @@
   justify-content: space-between;
   align-items: flex-end;
   position: relative;
+  text-decoration: none;
+
+  h2 {
+    text-decoration: none;
+  }
+}
+
+.space-card-pricing h2 {
+  text-decoration: none;
 }
