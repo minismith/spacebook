@@ -1,6 +1,8 @@
 <div class="container">
 
-  <div id="carouselExampleIndicators" class="carousel slide mb-3 rounded" data-bs-ride="true">
+<div class="row">
+
+  <div id="carouselExampleIndicators" class="carousel slide mb-3 rounded col-9" data-bs-ride="true">
 
     <div class="carousel-inner">
       <% @space.photos.each do |photo| %>
@@ -22,6 +24,13 @@
     </button>
 
   </div>
+
+  <div class="booking-box border col-3 p-3">
+    <h3>Book this flat</h3>
+    <p>This will be a form displaying the booking options for the customer</p>
+  </div>
+
+</div>
 
   <h2><%= @space.name %></h2>
 
