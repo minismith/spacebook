@@ -8,41 +8,39 @@
 <% end %>
 
 
-<div id="welcome">
-<h1>Welcome to Spacebook</h1>
-<h3>An extensive selection of incredible event spaces</h3>
-</div>
 
 
-<div class="banner" >
-  <div class="container-car">
-    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <%= image_tag 'eventhall1', class:"d-block w-100", style: 'height:620px;, object-fit:cover;' %>
-          <div class='picure' style='background-image'></div>
+  <div class="banner">
+    <div id="welcome"><h1>Welcome to Spacebook</h1></div>
+    <div class="container-car">
+      <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <%= image_tag 'eventhall1', class:"d-block w-100", style: 'height:620px;, object-fit:cover;' %>
+            <div class='picure' style='background: linear-gradient(to right, rgba(247,247,49,1) 0%,rgba(255,255,255,0) 69%)'></div>
+          </div>
+          <div class="carousel-item">
+            <%= image_tag 'eventhall2', class:"d-block w-100", style: 'height:620px;, object-fit:cover;' %>
+          </div>
+          <div class="carousel-item">
+            <%= image_tag 'eventhall3', class:"d-block w-100", style: 'height:620px;, object-fit:cover;' %>
+          </div>
         </div>
-        <div class="carousel-item">
-          <%= image_tag 'eventhall2', class:"d-block w-100", style: 'height:620px;, object-fit:cover;' %>
-        </div>
-        <div class="carousel-item">
-          <%= image_tag 'eventhall3', class:"d-block w-100", style: 'height:620px;, object-fit:cover;' %>
-        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
     </div>
   </div>
-</div>
 
 
-<h1>This weeks featured spaces !</h1>
+
+<div id="feature-title"><h1>This week's featured spaces!</h1></div>
 
 <div class="container-fluid">
   <div class="row">
