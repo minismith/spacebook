@@ -12,6 +12,7 @@ class SpacesController < ApplicationController
   def show
     @user = @space.user
     @booking = Booking.new(user: @user, space: @space)
+    @current_bookings = Booking.where(space_id: @space)
   end
 
   def edit

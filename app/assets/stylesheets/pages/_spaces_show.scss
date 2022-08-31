@@ -1,7 +1,39 @@
-h2 {
+.space-heading {
   font-weight: bold;
 }
 
-.container {
-  padding-top: 10px;
+.center-btns {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.booking-form {
+  border-radius: 7px;
+  box-shadow: 3px 3px 10px -3px lightgrey;
+
+    .btn {
+      width: 60%;
+      margin: 0 auto;
+    }
+
+    .submit-btn-box {
+      display: flex;
+      align-items: center;
+    }
+}
+
+.booking {
+  padding: 5px 5px;
+  border: 1px solid darkgrey;
+  border-radius: 7px;
+  box-shadow: 3px 3px 10px -3px lightgrey;
+  margin-bottom: 10px;
+
+    p {
+      margin: 0;
+    }
+}
+
+.owner-options {
+  margin-bottom: 50px;
 }
