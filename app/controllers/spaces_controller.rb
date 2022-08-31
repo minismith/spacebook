@@ -11,6 +11,7 @@ class SpacesController < ApplicationController
 
   def show
     @user = @space.user
+    @booking = Booking.new(user: @user, space: @space)
   end
 
   def edit
