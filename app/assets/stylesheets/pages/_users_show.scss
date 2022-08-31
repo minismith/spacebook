@@ -51,13 +51,24 @@
 }
 
 .spaces-index {
-  margin: 10px;
-  column-width: 4;
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns:1fr 1fr 1fr 1fr;
+  grid-gap: 16px;
 
   a {
     text-decoration: none;
     color: black;
+  }
+}
+
+@media(max-width: 992px) {
+  .spaces-index {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media(max-width: 768px) {
+  .spaces-index {
+    grid-template-columns: 1fr;
   }
 }
