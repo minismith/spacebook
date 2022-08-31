@@ -3,6 +3,7 @@ Specific CSS for your home-page
   background-size: cover;
   background-position: center;
   padding:50px;
+  position: static;
 }
 
 // .banner h1 {
@@ -20,9 +21,7 @@ Specific CSS for your home-page
 //   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 // }
 
-.container-car{
-  height:550px;
-}
+
 
 .search-form-control {
   position: relative;
