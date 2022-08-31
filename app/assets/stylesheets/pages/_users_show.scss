@@ -8,6 +8,13 @@
   margin: 20px;
 }
 
+.title h1 {
+  color: black;
+  font-family: 'Dosis', sans-serif;;
+  letter-spacing: 2px;
+  font-weight: 525;
+}
+
 .spaces_title {
   margin: 20px;
   display: flex;
@@ -44,9 +51,10 @@
 }
 
 .spaces-index {
-  margin: 20px;
-  column-width: 6;
+  margin: 10px;
+  column-width: 4;
   display: flex;
+  justify-content: center;
 
   a {
     text-decoration: none;
