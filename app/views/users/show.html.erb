@@ -6,8 +6,13 @@
 
   <div class="spaces_title">
     <h4>Your spaces</h4>
-    <div class="btn btn-ghost">
-      <%= link_to "List a new space", new_user_space_path(@user) %>
+    <div>
+      <div class="btn btn-ghost">
+        <%= link_to "List a new space", new_user_space_path(@user) %>
+      </div>
+      <div class="btn btn-ghost">
+        <%= link_to "Edit profile", edit_user_registration_path %>
+      </div>
     </div>
   </div>
 
