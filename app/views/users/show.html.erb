@@ -1,10 +1,8 @@
 <div class="container">
-
-  <div class="title">
+    <div class="title">
       <h1>Hello, <%= @user.first_name %></h1>
-  </div>
-
-  <div class="spaces_title">
+    </div>
+    <div class="spaces_title">
     <h4>Your spaces</h4>
     <div>
       <div class="btn btn-ghost">
@@ -15,24 +13,23 @@
       </div>
     </div>
   </div>
-
   <div class="spaces-index">
     <% @spaces.each do |space|%>
-      <%= link_to space_path(space) do %>
-        <div class="space-card">
-          <div class="space-card-image">
-            <%= cl_image_tag space.photos.first.key %>
-          </div>
-          <div class="space-card-infos">
-            <div>
-              <h2><%= space.name %></h2>
-            </div>
-            <div>
-              <h2 class="space-card-pricing">£<%= space.price_per_day.to_i %></h2>
-            </div>
-          </div>
+    <%= link_to space_path(space) do %>
+    <div class="space-card">
+      <div class="space-card-image">
+        <%= cl_image_tag space.photos.first.key %>
+      </div>
+      <div class="space-card-infos">
+        <div>
+          <h2><%= space.name %></h2>
         </div>
-      <% end %>
+        <div>
+          <h2 class="space-card-pricing">£<%= space.price_per_day.to_i %></h2>
+        </div>
+      </div>
+    </div>
+    <% end %>
     <% end %>
   </div>
 </div>
