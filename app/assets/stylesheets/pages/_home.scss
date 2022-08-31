@@ -3,7 +3,7 @@ Specific CSS for your home-page
   background-size: cover;
   background-position: center;
   padding:50px;
-  position: static;
+  position: relative;
 }
 
 // .banner h1 {
@@ -45,27 +45,46 @@ Specific CSS for your home-page
   outline: none !important;
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
 }
-
-#welcome h1 {
+h1 {
   color: white;
   font-family: 'Dosis', sans-serif;;
   letter-spacing: 2px;
-  font-weight: 525;
-}
-
-#welcome h3 {
-  color: white;
-  font-family:sans-serif;
-  letter-spacing: 2px;
-  font-weight: 400;
+  font-weight: 300px;
+  text-align: center;
 }
 
 #welcome {
   position: absolute;
-  border: solid 2px white;
-  border-radius: 2px;
-  background-color: #e7e7e772;
-  top: 50%;
-  left: 41%;
+  top: 55%;
+  left: 30%;
+  margin: 0 auto;
   z-index: 15;
+
+  h1 {
+    color: white;
+    font-family: 'Dosis', sans-serif;
+    font-size: 65px;
+    letter-spacing: 2px;
+    font-weight: 300px;
+    text-align: center;
+    margin: 0;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  }
+
+}
+
+#feature-title {
+  margin: 0 auto;
+  padding-top: 25px;
+
+  h1 {
+    color: black;
+    font-size: 25px;
+    font-family: 'Dosis', sans-serif ;
+    font-weight: 300px;
+  }
+}
+
+.container-fluid {
+  justify-content: center;
 }
