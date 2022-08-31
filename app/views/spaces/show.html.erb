@@ -31,7 +31,7 @@
         <%= f.input :message %>
         <%= f.input :booking_start %>
         <%= f.input :booking_end %>
-        <%= f.button :submit, class: 'btn-outline-dark' %>
+        <%= f.button :submit, 'Request to book', class: 'btn btn-outline-dark' %>
         <% end %>
       </div>
     </div>
@@ -40,13 +40,13 @@
 
   <h2><%= @space.name %></h2>
 
-  <div class="description pb-2">
-    <p><%= @space.description %> </p>
-  </div>
-
   <p><strong>Price per day:</strong> £<%=@space.price_per_day.to_i%></p>
 
-  <%= link_to "Edit this space", edit_space_path(@space), class: "btn btn-outline-dark" %>
-  <%= link_to "Delete this space", space_path(@space), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-outline-dark" %>
+  <p><%= @space.description %> </p>
+
+  <div class="owner-options">
+    <%= link_to "Edit this space", edit_space_path(@space), class: "btn btn-outline-dark" %>
+    <%= link_to "Delete this space", space_path(@space), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-outline-dark" %>
+  </div>
 
 </div>
