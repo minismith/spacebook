@@ -41,3 +41,19 @@
   .form-actions-log input {
     border: none !important;
   }
+
+  .back {
+    text-align: center;
+    // color: black;
+    // text-decoration: none;
+  }
+
+  .back a {
+    color: black;
+    text-decoration: none;
+
+  }
+
+  .back a:hover{
+    color: cornflowerblue;
+  }
