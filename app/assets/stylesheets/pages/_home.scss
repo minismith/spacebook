@@ -93,11 +93,17 @@ Specific CSS for your home-page
 }
 
 .container-fluid {
+  margin-top: 25px;
+}
+
+.feature_section {
+  display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .web-description{
-  margin: 15px;
+  margin: 25px 0;
   text-align: center;
   background-color: white;
   padding-top: 20px;
