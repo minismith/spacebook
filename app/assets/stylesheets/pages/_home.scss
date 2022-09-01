@@ -41,22 +41,16 @@ Specific CSS for your home-page
 }
 
 .search-form-control .form-control:focus {
-  border: 1px solid #1EDD88;
+  border: 1px solid #221D23;
   outline: none !important;
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
 }
-h1 {
-  color: white;
-  font-family: 'Dosis', sans-serif;;
-  letter-spacing: 2px;
-  font-weight: 300px;
-  text-align: center;
-}
 
-#welcome {
+
+.welcome {
   position: absolute;
-  top: 55%;
-  left: 30%;
+  top: 40%;
+  left: 19%;
   margin: 0 auto;
   z-index: 15;
   text-align: center;
@@ -64,18 +58,26 @@ h1 {
   h1 {
     color: white;
     font-family: 'Dosis', sans-serif;
-    font-size: 65px;
+    font-size: 90px;
     letter-spacing: 2px;
     font-weight: 300px;
     text-align: center;
     margin: 0;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    padding-bottom: 15px;
   }
+
   h3{
     color:white;
     font-family: 'Dosis', sans-serif;
     text-align: center;
+    font-size: 40px;
+    letter-spacing: 2px;
+    font-weight: 300px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    padding-bottom: 15px ;
   }
+
 }
 
 #feature-title {
@@ -101,4 +103,29 @@ h1 {
   padding-bottom: 20px;
   // border: 1px solid black;
   margin-top: 20px;
+}
+
+.btn-ghost-find {
+  color: white;
+  border: 1px solid #4A4A4A;
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-weight: lighter;
+  background-color: #221D23;
+  box-shadow: 0 2px 2px -2px rgba(0,0,0,.2)
+}
+
+.btn-ghost-find a {
+  text-decoration: none;
+  font-family: "Nunito", "Helvetica", "sans-serif";
+  color: white;
+}
+
+.btn-ghost-find:hover {
+  background-color: #221D23;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.7s;
+  color: white;
+  border: none;
 }
