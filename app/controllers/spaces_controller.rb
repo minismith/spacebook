@@ -1,5 +1,6 @@
 class SpacesController < ApplicationController
   before_action :set_space, only: %i[show edit update destroy]
+
   def index
     @spaces = Space.all
   end
@@ -51,4 +52,5 @@ class SpacesController < ApplicationController
   def space_params
     params.require(:space).permit(:name, :address, :price_per_day, :description, photos: [])
   end
+
 end
