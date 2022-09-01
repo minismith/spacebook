@@ -1,7 +1,7 @@
 <div class="container pb-5">
 
-  <h1>List your space</h1>
-
+  <h1 id="list_title">List your space</h1>
+  <div id="list_form">
   <%= simple_form_for [@user, @space] do |f| %>
     <%= f.input :name, hint: 'Go on, sell it to us...' %>
     <%= f.input :address %>
@@ -10,5 +10,5 @@
     <%= f.input :photos, as: :file, input_html: { multiple: true } %>
     <%= f.button :submit, class: 'btn-outline-dark' %>
   <% end %>
-
+  </div>
 </div>
