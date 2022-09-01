@@ -22,6 +22,14 @@ class SpacesController < ApplicationController
     @user = @space.user
     @booking = Booking.new(user: @user, space: @space)
     @current_bookings = Booking.where(space_id: @space)
+    # @markers = @space.geocoded.map do |space|
+    #   {
+    #     lat: space.latitude,
+    #     lng: space.longitude,
+    #     info_window: render_to_string(partial: "info_window", locals: {space: space}),
+    #     image_url: helpers.asset_url("https://res.cloudinary.com/dg6mudunt/image/upload/v1662040847/marker_widycg.png")
+    #   }
+    # end
   end
 
   def edit

@@ -1,3 +1,6 @@
+@import "components/_map.scss";
+@import "components/_address_autocomplete.scss";
+
 .space-heading {
   font-weight: bold;
   padding-bottom: 10px;
@@ -84,11 +87,17 @@
   }
 }
 
-.map {
-  display: flex block;
+.pics-and-map {
+  display: flex;
+}
 
+.map-container {
+  height: 600px;
+  top: 0;
+  border-radius: 7px;
+  margin-right: 20px;
 
-  p {
+    p {
     font-size: 18px;
     font-weight: bold;
   }
@@ -97,10 +106,6 @@
 .space-info-and-book {
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
   margin: 2px;
-}
-
-.image-and-map {
-  display: flex;
 }
 
 .show-photo {
