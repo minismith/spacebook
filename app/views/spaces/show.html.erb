@@ -68,8 +68,8 @@
 
       <div class="center-btns">
 
-          <%= link_to "Edit this space", edit_space_path(@space), class: "btn btn-outline-dark" %>
-          <%= link_to "Delete this space", space_path(@space), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-outline-dark" %>
+          <%= link_to "Edit this space", edit_space_path(@space), class: "btn btn-outline-dark-edit" %>
+          <%= link_to "Delete this space", space_path(@space), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-outline-dark-delete" %>
 
         <h4 class="my-5">Your upcoming bookings for this space:</h4>
       </div>

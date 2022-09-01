@@ -24,6 +24,15 @@
   margin-top: 30px;
 }
 
+.form-horizontal {
+  width: 100%;
+}
+
+.center-submit {
+  text-align: center;
+  margin-top: 40px;
+}
+
 .btn-outline-dark-new-space {
   font-family: "Nunito", "Helvetica", "sans-serif";
   color: black;
@@ -36,7 +45,6 @@
   text-align: center;
   transition: opacity 0.3s ease;
   margin-top: 10px;
-  padding-left: 30px;
 }
 
 .btn-outline-dark-new-space:hover {
@@ -46,12 +54,4 @@ text-decoration: none;
 font-weight: 600;
 transition: 0.7s;
 border: none;
-}
-.form-horizontal {
-  width: 100%;
-}
-
-.center-submit {
-  text-align: center;
-  margin-top: 40px;
 }
