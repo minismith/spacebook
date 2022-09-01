@@ -87,12 +87,6 @@
 .map {
   display: flex block;
 
-  img {
-    width: 85%;
-    height: 85%;
-    align-self: flex-end;
-
-  }
 
   p {
     font-size: 18px;
@@ -107,4 +101,10 @@
 
 .image-and-map {
   display: flex;
+}
+
+.carousel-item {
+  width: 800px;
+  height: 600px;
+  object-position: center
 }
