@@ -94,16 +94,24 @@ Specific CSS for your home-page
 }
 
 .container-fluid {
+  margin-top: 25px;
+}
+
+.feature_section {
+  display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .web-description{
+  margin: 25px 0;
   text-align: center;
   background-color: white;
   padding-top: 30px;
   padding-bottom: 30px;
   // border: 1px solid black;
   margin-top: 20px;
+  font-weight: lighter;
 }
 
 .btn-ghost-find {
