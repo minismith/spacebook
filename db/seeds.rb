@@ -6,15 +6,15 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-# require 'faker'
+require 'faker'
 
-# puts 'creating 100 fake event spaces'
+puts 'creating 100 fake event spaces'
 
-# 100.times do
-#   spaces = Space.new(
-#     name:,
-#     description:,
-#     address:,
-#     price_per_day:,
-#   )
-# end
+100.times do
+  spaces = Space.new(
+    name:,
+    description:,
+    address:Faker::Address.street_address,
+    price_per_day:,
+  )
+end
