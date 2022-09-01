@@ -21,12 +21,12 @@
 
 }
 
-.btn-outline-dark-edit input:hover {
+.btn-outline-dark-edit2 input:hover {
   border: none !important;
   text-decoration: none;
   }
 
-  .btn-outline-dark-edit input {
+  .btn-outline-dark-edit2 input {
     border: none !important;
   }
 
@@ -46,7 +46,7 @@
     color: cornflowerblue;
   }
 
-  .btn-outline-dark-edit {
+  .btn-outline-dark-edit2 {
     font-family: "Nunito", "Helvetica", "sans-serif";
     color: black;
     padding: 8px 24px;
@@ -57,14 +57,13 @@
     border: none;
     text-align: center;
     transition: opacity 0.3s ease;
-
+    margin-top: 10px;
   }
 
-  #edit-button:hover {
+  .btn-outline-dark-edit2 {
     background-color: #85dc47;
     color: black;
     text-decoration: none;
-    font-weight: 600;
     transition: 0.7s;
     border: none;
   }
