@@ -55,34 +55,21 @@ h1 {
 
 #welcome {
   position: absolute;
-  top: 55%;
-  left: 30%;
+  top: 40%;
+  left: 23%;
   margin: 0 auto;
   z-index: 15;
 
   h1 {
     color: white;
     font-family: 'Dosis', sans-serif;
-    font-size: 65px;
+    font-size: 90px;
     letter-spacing: 2px;
     font-weight: 300px;
     text-align: center;
     margin: 0;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   }
-
-  h3 {
-    color: white;
-    font-family: 'Dosis', sans-serif;
-    font-size: 35px;
-    letter-spacing: 2px;
-    font-weight: 300px;
-    text-align: center;
-    margin: 0;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-    padding-top: 15px;
-  }
-
 }
 
 #feature-title {
