@@ -9,10 +9,9 @@
 
 .title h1 {
   color: black;
-  font-family: 'Dosis', sans-serif;
-  font-size: 65px;
+  font-family: 'Dosis', sans-serif;;
   letter-spacing: 2px;
-  font-weight: 300px;
+  font-weight: 525;
 }
 
 .spaces_title {
@@ -23,8 +22,8 @@
   padding-top: 15px;
   background-color: rgb(235, 235, 235);
   align-items: center;
-  border-bottom: solid 0.5px #17BEBB ;
-  border-right: solid 0.5px #17BEBB ;
+  border-bottom: solid 0.5px #221D23 ;
+  border-right: solid 0.5px #221D23 ;
   box-shadow: 0 2px 2px -2px rgba(0,0,0,.2)
 
 }
@@ -46,12 +45,12 @@
 
 .btn-ghost a {
   text-decoration: none;
-  color: black;
+  color: white;
   font-family: "Nunito", "Helvetica", "sans-serif";
 }
 
 .btn-ghost:hover {
-  background-color: #17BEBB;
+  background-color: #221D23;
   opacity: 1;
   text-decoration: none;
   font-weight: 600;
@@ -82,7 +81,7 @@
 }
 
 .space-card {
-  border-bottom: solid 0.5px #17BEBB ;
-  border-right: solid 0.5px #17BEBB ;
+  border-bottom: solid 0.5px #221D23 ;
+  border-right: solid 0.5px #221D23 ;
   box-shadow: 0 2px 2px -2px rgba(0,0,0,.2);
 }
