@@ -12,9 +12,11 @@
 @import "pages/index";
 @import "pages/users_show";
 @import "pages/spaces_show";
+@import "pages/spaces_index";
 @import "pages/sign_up";
 @import "pages/log_in";
 @import "pages/registrations_edit";
+@import "pages/new_space";
 
 html {
   min-height: 100%;
@@ -22,4 +24,12 @@ html {
 }
 body {
    min-height: 100%;
+}
+
+.btn {
+  border: none;
+}
+
+.btn:hover {
+  border: none;
 }

@@ -22,32 +22,59 @@
   padding-top: 15px;
   background-color: rgb(235, 235, 235);
   align-items: center;
+  box-shadow: 0 2px 2px -2px rgba(0,0,0,.2)
+
 }
 
 .btn {
   text-decoration: none!important;
 }
 
-.btn-ghost {
-  color: #4A4A4A;
+.btn-ghost-list {
+  color: black;
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-weight: lighter;
+  background-color: #96F550;
+  box-shadow: 0 2px 2px -2px rgba(0,0,0,.2)
+}
+.btn-ghost-edit {
+  color: white;
   border: 1px solid #4A4A4A;
   padding: 8px 24px;
   border-radius: 50px;
   font-weight: lighter;
-  opacity: 0.6;
-  transition: opacity 0.3s ease;
-
+  background-color: #221D23;
+  box-shadow: 0 2px 2px -2px rgba(0,0,0,.2)
 }
 
-.btn-ghost a {
+.btn-ghost-edit a {
   text-decoration: none;
-  color: black;
   font-family: "Nunito", "Helvetica", "sans-serif";
+  color: white;
+
 }
 
-.btn-ghost:hover {
-  opacity: 1;
+.btn-ghost-list a {
   text-decoration: none;
+  font-family: "Nunito", "Helvetica", "sans-serif";
+  color: black;
+
+}
+
+.btn-ghost-list:hover {
+  background-color: #85dc47;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.7s;
+  border: none;
+}
+
+.btn-ghost-edit:hover {
+  background-color: #221D23;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.7s;
 }
 
 .spaces-index {
@@ -72,7 +99,6 @@
     grid-template-columns: 1fr;
   }
 }
-
-.map img {
-  width: 100%;
+.space-card {
+  box-shadow: 0 2px 2px -2px rgba(0,0,0,.2);
 }
