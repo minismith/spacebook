@@ -1,6 +1,6 @@
-<div class="container">
+<div class="edit-container">
   <h1>Edit your listing</h1>
-
+  <div id="edit-form">
   <%= simple_form_for [@space] do |f| %>
     <%= f.input :name, hint: 'Go on, sell it to us...' %>
     <%= f.input :address %>
@@ -11,7 +11,7 @@
         <%= f.hidden_field :photos, value: ph.signed_id %>
       <% end %>
     <% end %>
-    <%= f.button :submit, 'Confirm update', class: 'btn-outline-dark' %>
+    <%= f.button :submit, 'Confirm update', class: 'btn-outline-dark-edit' %>
   <% end %>
-
+  </div>
 </div>
