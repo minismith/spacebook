@@ -1,16 +1,17 @@
 <div class="container pt-3">
 
+
   <div class="row">
 
-    <div id="carouselExampleIndicators" class="carousel slide mb-3 rounded col-9" data-bs-ride="true">
+    <div id="carouselExampleIndicators" class="carousel slide mb-3 rounded col-7" data-bs-ride="true">
 
-    <div class="carousel-inner">
-      <% @space.photos.each_with_index do |photo, i| %>
+      <div class="carousel-inner">
+        <% @space.photos.each_with_index do |photo, i| %>
 
-        <div class="carousel-item <%= "active" if i==0 %>">
-          <%= cl_image_tag photo.key, class: "d-block w-100 h-80" %>
-        </div>
-        <% end %>
+          <div class="carousel-item <%= "active" if i==0 %>">
+            <%= cl_image_tag photo.key, class: "d-block w-100" %>
+          </div>
+          <% end %>
       </div>
 
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -21,10 +22,27 @@
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
       </button>
-
     </div>
 
-    <div class="booking-box col-3 p-3">
+    <div class="map col-5">
+        <p>Location</p>
+    </div>
+  </div>
+
+  <div class="row">
+
+      <div class="space-details col-7">
+        <h2 class="space-heading"><%= @space.name %></h2>
+        <p><strong>£<%=@space.price_per_day.to_i%></strong> per day</p>
+        <p><strong>Address:</strong> <%= @space.address %> </p>
+        <div class="space-description">
+          <p> <%= @space.description %> </p>
+        </div>
+      </div>
+
+
+
+    <div class="booking-box col-5 p-4">
       <div class="booking-form border p-2">
         <%= simple_form_for [@user, @space, @booking] do |f| %>
         <%= f.input :message %>
@@ -36,15 +54,11 @@
         <% end %>
       </div>
     </div>
-
   </div>
 
-  <h2 class="space-heading"><%= @space.name %></h2>
 
-  <p><strong>£<%=@space.price_per_day.to_i%></strong> per day</p>
-  <p><strong>Address:</strong> <%= @space.address %> </p>
 
-  <p><%= @space.description %> </p>
+
 
   <div class="owner-options my-5">
 
