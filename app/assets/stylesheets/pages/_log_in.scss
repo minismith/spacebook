@@ -57,10 +57,12 @@
     border: none;
     text-align: center;
     transition: opacity 0.3s ease;
+    padding-top: 4px;
   }
 
   .form-actions-log:hover {
     background-color: #85dc47;
+    color: black;
     text-decoration: none;
     font-weight: 600;
     transition: 0.7s;
