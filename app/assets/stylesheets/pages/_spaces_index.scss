@@ -1,3 +1,6 @@
+@import "components/_map.scss";
+@import "components/_address_autocomplete.scss";
+
 .space-index-container {
   margin: 20px;
   display: flex;
@@ -53,10 +56,10 @@
 }
 
 .map-container {
-  background-image: url('https://media.istockphoto.com/vectors/abstract-city-map-illustration-vector-id613540742?k=20&m=613540742&s=612x612&w=0&h=lAJfjRxW6wbzsy-2AIkedAEO4ngKHwxKWzNpi1CbQaQ=');
+  // background-image: url('https://media.istockphoto.com/vectors/abstract-city-map-illustration-vector-id613540742?k=20&m=613540742&s=612x612&w=0&h=lAJfjRxW6wbzsy-2AIkedAEO4ngKHwxKWzNpi1CbQaQ=');
   width: 100%;
-  height: 100vh;
-  background-size: cover;
+  height: 600px;
+  // background-size: cover;
   position: sticky;
   top: 0;
   border-radius: 7px;

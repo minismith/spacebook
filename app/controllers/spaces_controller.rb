@@ -2,6 +2,14 @@ class SpacesController < ApplicationController
   before_action :set_space, only: %i[show edit update destroy]
   def index
     @spaces = Space.all
+    @markers = @spaces.geocoded.map do |space|
+      {
+        lat: space.latitude,
+        lng: space.longitude,
+        info_window: render_to_string(partial: "info_window", locals: {space: space}),
+        image_url: helpers.asset_url("https://res.cloudinary.com/dg6mudunt/image/upload/v1662040847/marker_widycg.png")
+      }
+    end
   end
 
   def new
