@@ -117,3 +117,37 @@
   height: 600px;
   object-position: center
 }
+
+.btn-outline-dark-delete {
+  background-color: #DB162F;
+  color: white;
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-weight: lighter;
+  box-shadow: 0 2px 2px -2px rgba(0,0,0,.2)
+}
+
+.btn-outline-dark-delete:hover {
+  background-color: #b51227;
+  text-decoration: none;
+  transition: 0.7s;
+  border: none;
+  color: white
+}
+
+.btn-outline-dark-edit {
+  color: white;
+  border: 1px solid #4A4A4A;
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-weight: lighter;
+  background-color: #221D23;
+  box-shadow: 0 2px 2px -2px rgba(0,0,0,.2)
+}
+
+.btn-outline-dark-edit:hover {
+  background-color: #221D23;
+  text-decoration: none;
+  transition: 0.7s;
+  color: white;
+}

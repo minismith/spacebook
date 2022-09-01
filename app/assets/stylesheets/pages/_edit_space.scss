@@ -1,4 +1,4 @@
-#log_in_form{
+#edit-form{
   border: solid #D6E3F8 0.5px;
   border-radius: 2px;
   box-shadow: 0 2px 2px -2px rgba(0,0,0,.2);
@@ -13,7 +13,7 @@
   margin-top: 30px;
 }
 
-#log_in_title {
+.edit-container h1 {
   text-align: center;
   margin-top: 25px;
   font-weight: 500;
@@ -21,12 +21,12 @@
 
 }
 
-.form-actions-log input:hover {
+.btn-outline-dark-edit2 input:hover {
   border: none !important;
   text-decoration: none;
   }
 
-  .form-actions-log input {
+  .btn-outline-dark-edit2 input {
     border: none !important;
   }
 
@@ -46,7 +46,7 @@
     color: cornflowerblue;
   }
 
-  .form-actions-log {
+  .btn-outline-dark-edit2 {
     font-family: "Nunito", "Helvetica", "sans-serif";
     color: black;
     padding: 8px 24px;
@@ -57,14 +57,13 @@
     border: none;
     text-align: center;
     transition: opacity 0.3s ease;
-
+    margin-top: 10px;
   }
 
-  .form-actions-log:hover {
+  .btn-outline-dark-edit2 {
     background-color: #85dc47;
     color: black;
     text-decoration: none;
-    font-weight: 600;
     transition: 0.7s;
     border: none;
   }
