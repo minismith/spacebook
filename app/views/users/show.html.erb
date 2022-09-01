@@ -18,9 +18,7 @@
       <%= link_to space_path(space) do %>
       <div class="space-card">
         <div class="space-card-image">
-          <% space.photos.each do |photo| %>
-          <%= cl_image_tag photo.key %>
-          <% end %>
+          <%= cl_image_tag space.photos.first.key %>
         </div>
         <div class="space-card-infos">
           <div>
