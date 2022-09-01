@@ -1,5 +1,6 @@
 .space-heading {
   font-weight: bold;
+  padding-bottom: 10px;
 }
 
 .center-btns {
@@ -7,9 +8,30 @@
   margin-bottom: 50px;
 }
 
+.btn-outline-dark {
+  color: #4A4A4A;
+  border: 1px solid #4A4A4A;
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-weight: lighter;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.btn-outline-dark:hover {
+  background-color: #221D23;
+  opacity: 1;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.7s;
+  color: white;
+}
+
 .booking-form {
   border-radius: 7px;
   box-shadow: 3px 3px 10px -3px lightgrey;
+  width: 65%;
+
 
     .btn {
       width: 70%;
@@ -20,6 +42,12 @@
       display: flex;
       align-items: center;
     }
+}
+
+.booking-box {
+  display: flex;
+  justify-content: center;
+
 }
 
 .booking {
@@ -37,4 +65,46 @@
 
 .owner-options {
   margin-top: 20px;
+}
+
+.space-details {
+  padding-top: 10px;
+
+  p {
+    font-size: 18px;
+  }
+}
+
+.space-description {
+  padding-top: 10px;
+  width: 696px;
+
+  p {
+  font-size: 16px;
+  }
+}
+
+.map {
+  display: flex block;
+
+
+  p {
+    font-size: 18px;
+    font-weight: bold;
+  }
+}
+
+.space-info-and-book {
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  margin: 2px;
+}
+
+.image-and-map {
+  display: flex;
+}
+
+.show-photo {
+  width: 800px;
+  height: 600px;
+  object-position: center
 }

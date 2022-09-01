@@ -1,14 +1,15 @@
 <div class="container pt-3">
 
+
   <div class="row">
 
-    <div id="carouselExampleIndicators" class="carousel slide mb-3 rounded col-9" data-bs-ride="true">
+    <div id="carouselExampleIndicators" class="carousel slide mb-3 rounded col-7" data-bs-ride="true">
 
-    <div class="carousel-inner">
-      <% @space.photos.each_with_index do |photo, i| %>
+      <div class="carousel-inner">
+        <% @space.photos.each_with_index do |photo, i| %>
 
-        <div class="carousel-item <%= "active" if i==0 %>">
-          <%= cl_image_tag photo.key, class: "d-block w-100 h-80" %>
+        <div class="carousel-item show-photo <%= "active" if i==0 %>">
+          <%= cl_image_tag photo.key, class: "d-block w-100" %>
         </div>
         <% end %>
       </div>
@@ -21,51 +22,70 @@
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
       </button>
-
     </div>
 
-    <div class="booking-box col-3 p-3">
-      <div class="booking-form border p-2">
-        <%= simple_form_for [@user, @space, @booking] do |f| %>
-        <%= f.input :message %>
-        <%= f.input :booking_start %>
-        <%= f.input :booking_end %>
-        <div class="submit-btn-box">
-          <%= f.button :submit, 'Request to book', class: 'btn btn-outline-dark' %>
-        </div>
-        <% end %>
-      </div>
+    <div class="map col-5">
     </div>
-
   </div>
 
-  <h2 class="space-heading"><%= @space.name %></h2>
+  <div class="row space-info-and-book">
 
-  <p><strong>£<%=@space.price_per_day.to_i%></strong> per day</p>
-
-  <p><%= @space.description %> </p>
-
-  <div class="owner-options my-5">
-
-    <div class="center-btns">
-      <%= link_to "Edit this space", edit_space_path(@space), class: "btn btn-outline-dark" %>
-      <%= link_to "Delete this space", space_path(@space), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-outline-dark" %>
-
-      <h4 class="my-5">Your upcoming bookings for this space:</h4>
-    </div>
-
-    <div class="upcoming-bookings mb-5">
-
-      <% @current_bookings.each do |booking| %>
-        <div class="booking">
-          <p><strong>Customer:</strong> <%=booking.user.first_name%> <%=booking.user.last_name%></p>
-          <p><strong>Message:</strong> <%= booking.message %></p>
-          <p><strong>Booking start:</strong> <%= booking.booking_start %></p>
-          <p><strong>Booking end:</strong> <%= booking.booking_end %></p>
+      <div class="space-details col-7">
+        <h2 class="space-heading"><%= @space.name %></h2>
+        <p><strong>£<%=@space.price_per_day.to_i%></strong> per day</p>
+        <p><strong>Address:</strong> <%= @space.address %> </p>
+        <div class="space-description">
+          <p> <%= @space.description %> </p>
         </div>
+      </div>
+
+
+
+    <div class="booking-box col-5 p-4">
+      <% if current_user == @user %>
+        <p>Booking unavailable as you are the owner of this space</p>
+      <% else %>
+        <div class="booking-form border p-2">
+          <%= simple_form_for [@user, @space, @booking] do |f| %>
+          <%= f.input :message %>
+          <%= f.input :booking_start %>
+          <%= f.input :booking_end %>
+          <div class="submit-btn-box">
+            <%= f.button :submit, 'Request to book', class: 'btn btn-outline-dark' %>
+          </div>
+          <% end %>
+        </div>
+      </div>
       <% end %>
     </div>
 
-  </div>
 
+
+
+
+  <% if current_user == @user %>
+    <div class="owner-options my-5">
+
+      <div class="center-btns">
+
+          <%= link_to "Edit this space", edit_space_path(@space), class: "btn btn-outline-dark" %>
+          <%= link_to "Delete this space", space_path(@space), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-outline-dark" %>
+
+        <h4 class="my-5">Your upcoming bookings for this space:</h4>
+      </div>
+
+      <div class="upcoming-bookings mb-5">
+
+        <% @current_bookings.each do |booking| %>
+          <div class="booking">
+            <p><strong>Customer:</strong> <%=booking.user.first_name%> <%=booking.user.last_name%></p>
+            <p><strong>Message:</strong> <%= booking.message %></p>
+            <p><strong>Booking start:</strong> <%= booking.booking_start %></p>
+            <p><strong>Booking end:</strong> <%= booking.booking_end %></p>
+          </div>
+        <% end %>
+      </div>
+
+    </div>
+  <% end %>
 </div>
