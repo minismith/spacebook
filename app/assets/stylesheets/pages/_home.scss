@@ -83,6 +83,7 @@ Specific CSS for your home-page
 #feature-title {
   margin: 0 auto;
   padding-top: 25px;
+  padding-bottom: 25px;
 
   h1 {
     color: black;
@@ -99,8 +100,8 @@ Specific CSS for your home-page
 .web-description{
   text-align: center;
   background-color: white;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   // border: 1px solid black;
   margin-top: 20px;
 }
@@ -128,4 +129,13 @@ Specific CSS for your home-page
   transition: 0.7s;
   color: white;
   border: none;
+}
+
+.featured-cards {
+  margin-top: 40px;
+  padding-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: auto;
 }
