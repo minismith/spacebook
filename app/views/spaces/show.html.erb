@@ -8,10 +8,10 @@
       <div class="carousel-inner">
         <% @space.photos.each_with_index do |photo, i| %>
 
-          <div class="carousel-item <%= "active" if i==0 %>">
-            <%= cl_image_tag photo.key, class: "d-block w-100" %>
-          </div>
-          <% end %>
+        <div class="carousel-item show-photo <%= "active" if i==0 %>">
+          <%= cl_image_tag photo.key, class: "d-block w-100" %>
+        </div>
+        <% end %>
       </div>
 
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -25,7 +25,6 @@
     </div>
 
     <div class="map col-5">
-        <p>Location</p>
     </div>
   </div>
 
