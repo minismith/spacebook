@@ -21,18 +21,6 @@
 
 }
 
-
-.form-actions-log {
-  color: #4A4A4A;
-  border: 1px solid #4A4A4A;
-  padding: 8px 24px;
-  border-radius: 50px;
-  font-weight: lighter;
-  opacity: 0.6;
-  transition: opacity 0.3s ease;
-  text-align: center;
-}
-
 .form-actions-log input:hover {
   border: none !important;
   text-decoration: none;
@@ -56,4 +44,25 @@
 
   .back a:hover{
     color: cornflowerblue;
+  }
+
+  .form-actions-log {
+    font-family: "Nunito", "Helvetica", "sans-serif";
+    color: black;
+    padding: 8px 24px;
+    border-radius: 50px;
+    font-weight: lighter;
+    background-color: #96F550;
+    box-shadow: 0 2px 2px -2px rgba(0,0,0,.2);
+    border: none;
+    text-align: center;
+    transition: opacity 0.3s ease;
+  }
+
+  .form-actions-log:hover {
+    background-color: #85dc47;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.7s;
+    border: none;
   }

@@ -104,3 +104,28 @@ Specific CSS for your home-page
   // border: 1px solid black;
   margin-top: 20px;
 }
+
+.btn-ghost-find {
+  color: white;
+  border: 1px solid #4A4A4A;
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-weight: lighter;
+  background-color: #221D23;
+  box-shadow: 0 2px 2px -2px rgba(0,0,0,.2)
+}
+
+.btn-ghost-find a {
+  text-decoration: none;
+  font-family: "Nunito", "Helvetica", "sans-serif";
+  color: white;
+}
+
+.btn-ghost-find:hover {
+  background-color: #221D23;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.7s;
+  color: white;
+  border: none;
+}
