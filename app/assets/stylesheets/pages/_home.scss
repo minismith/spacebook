@@ -97,12 +97,14 @@ Specific CSS for your home-page
 }
 
 .web-description{
+  margin: 15px;
   text-align: center;
   background-color: white;
   padding-top: 20px;
   padding-bottom: 20px;
-  // border: 1px solid black;
+  font-weight: lighter;
   margin-top: 20px;
+  font-weight: lighter;
 }
 
 .btn-ghost-find {
