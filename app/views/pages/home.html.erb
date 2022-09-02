@@ -4,12 +4,14 @@
       <h1>Welcome to Spacebook</h1>
       <h3>Find and hire the perfect spaces for your events and <br> for the most memorable nights</h3>
       <div class="welcome-button">
+
         <% if user_signed_in? %>
           <%= link_to "List a space", new_user_space_path(current_user), class: "btn btn-ghost-list" %>
         <% else %>
           <%= link_to "List a space", new_user_session_path, class: "btn btn-ghost-list" %>
         <% end %>
         <%= link_to "Find a space", spaces_path, class: "btn btn-ghost-find" %>
+
       </div>
     </div>
 </div>
