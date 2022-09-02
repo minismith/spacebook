@@ -41,7 +41,7 @@
 .form-control{
   width: 300px;
   background-color: white;
-  border: none;
+
 }
 
 input.btn{
@@ -65,4 +65,11 @@ input.btn{
 .form-control:hover{
   border:2px solid grey;
   background-color: f4f4f4;
+}
+
+
+
+
+#searchborder{
+  border: none;
 }
