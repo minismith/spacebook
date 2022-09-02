@@ -4,13 +4,18 @@
   <div id="list_form">
   <%= simple_form_for [@user, @space] do |f| %>
 
-    <%= f.input :name, hint: 'Go on, sell it to us...' %>
-    <%= f.input :address %>
-    <%= f.input :description, hint: 'Include everything that makes your space stand out!' %>
-    <%= f.input :price_per_day, label: 'Price per day (in £)' %>
-    <%= f.input :photos, as: :file, input_html: { multiple: true } %>
-    <%= f.button :submit, class: 'btn-outline-dark-new-space' %>
-
+    <%= f.input :name, hint: 'Go on, sell it to us...', input_html: {style: 'width: 100%'} %>
+    <%= f.input :address,
+    input_html: {data: {address_autocomplete_target: "address"}, class: "d-none"},
+    wrapper_html: {data: {controller: "address-autocomplete",
+    address_autocomplete_api_key_value: ENV["MAPBOX_API_KEY"]}}
+    %>
+    <%= f.input :description, hint: 'Include everything that makes your space stand out!', input_html: {style: 'width: 100%'} %>
+    <%= f.input :price_per_day, label: 'Price per day (in £)', input_html: {style: 'width: 100%'} %>
+    <%= f.input :photos, as: :file, input_html: { multiple: true, style: 'width: 100%' } %>
+    <div class="center-submit">
+      <%= f.button :submit, class: 'btn-outline-dark-new-space' %>
+    </div>
   <% end %>
   </div>
 </div>

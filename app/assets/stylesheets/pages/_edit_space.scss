@@ -1,16 +1,22 @@
+@import "components/address_autocomplete";
+
 #edit-form{
   border: solid #D6E3F8 0.5px;
   border-radius: 2px;
   box-shadow: 0 2px 2px -2px rgba(0,0,0,.2);
   background-color: white;
   display: flex;
-  width: 45%;
+  width: 60%;
   justify-content: center;
   align-items: center;
   padding: 30px 0;
   margin: 0 auto;
   margin-bottom: 40px;
   margin-top: 30px;
+
+    form {
+      width: 45%;
+    }
 }
 
 .edit-container h1 {
@@ -19,6 +25,11 @@
   font-weight: 500;
   text-shadow: 0 2px 2px -2px rgba(0,0,0,.2); ;
 
+}
+
+.center-submit {
+  text-align: center;
+  margin-top: 40px;
 }
 
 .btn-outline-dark-edit2 input:hover {
