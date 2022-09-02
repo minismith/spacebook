@@ -1,4 +1,4 @@
-<div class="banner">
+<div class="banner" style="height: 650px; background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://res.cloudinary.com/dg6mudunt/image/upload/v1662123872/bar_dbax9v.jpg')">
 
     <div class="welcome">
       <h1>Welcome to Spacebook</h1>
@@ -12,30 +12,6 @@
         <%= link_to "Find a space", spaces_path, class: "btn btn-ghost-find" %>
       </div>
     </div>
-
-    <div class="container-car">
-      <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <%= cl_image_tag('eventhall1_tfqmhj.jpg', class:"d-block w-100", height: 620, crop: :fill) %>
-          </div>
-          <div class="carousel-item">
-            <%= cl_image_tag('eventhall2_djkptx.jpg', class:"d-block w-100", style: 'height:620px; object-fit:cover') %>
-          </div>
-          <div class="carousel-item">
-            <%= cl_image_tag('eventhall3_o8rjj0.jpg', class:"d-block w-100", style: 'height:620px; object-fit:cover') %>
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
-    </div>
 </div>
 
 
@@ -45,14 +21,14 @@
 </div>
 
 
-<div id="feature-title"><h1>This week's featured spaces!</h1></div>
+<div id="feature-title"><h1>This week's featured spaces:</h1></div>
 
 <div class="container-fluid">
     <div class="spaces-index featured-index">
     <% @featured = @spaces.first(6) %>
     <% @featured.each do |space|%>
       <%= link_to space_path(space) do %>
-      <div class="space-card">
+      <div class="space-card mb-5">
         <div class="space-card-image">
           <%= cl_image_tag space.photos.first.key %>
         </div>
