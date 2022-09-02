@@ -46,7 +46,7 @@
 
              <div>
                 <%= link_to icon('fa-solid', 'xmark'),
-                user_path(@user),
+                booking_path(booking),
                 data: {turbo_method: :delete, turbo_confirm: "Are you sure you want to cancel this booking?"},
                 class: "btn btn-outline-dark py-1 px-2 m-1 position-absolute top-0 end-0"
                 %>
