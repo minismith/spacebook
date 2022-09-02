@@ -1,4 +1,4 @@
-#edit_title {
+#edit_title h2 {
   text-align: center;
   margin-top: 25px;
   font-weight: 500;
@@ -9,7 +9,7 @@
   letter-spacing: 2px;
 }
 
-#list_form {
+#edit-profile {
   border-radius: 2px;
   background-color: white;
   display: flex;
@@ -30,3 +30,34 @@
   text-align: center;
   margin-top: 40px;
 }
+
+.cancel-account {
+  text-align: center;
+
+  a {
+    text-decoration: none;
+    color: red;
+  }
+}
+
+.form-actions {
+  font-family: "Nunito", "Helvetica", "sans-serif";
+    color: black;
+    padding: 8px 24px;
+    border-radius: 50px;
+    font-weight: lighter;
+    background-color: #96F550;
+    box-shadow: 0 2px 2px -2px rgba(0,0,0,.2);
+    border: none;
+    text-align: center;
+    transition: opacity 0.3s ease;
+    margin-top: 6px;
+  }
+
+.form-actions:hover {
+    background-color: #85dc47;
+    color: black;
+    text-decoration: none;
+    transition: 0.7s;
+    border: none;
+  }
