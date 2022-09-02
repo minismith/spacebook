@@ -32,4 +32,46 @@
       <% end %>
     <% end %>
   </div>
+
+  <div class="spaces_title">
+    <h4>Your bookings</h4>
+
+  </div>
+
+  <div class="user-bookings mb-5">
+
+        <% @user_bookings.each do |booking| %>
+          <%= link_to space_path(booking.space), class: "text-decoration-none text-dark" do %>
+            <div class="booking position-relative">
+
+             <div>
+                <%= link_to icon('fa-solid', 'xmark'),
+                user_path(@user),
+                data: {turbo_method: :delete, turbo_confirm: "Are you sure you want to cancel this booking?"},
+                class: "btn btn-outline-dark py-1 px-2 m-1 position-absolute top-0 end-0"
+                %>
+              </div>
+
+              <div class="d-flex justify-content-between align-items-center px-4 py-3">
+                <div class="booking-text">
+                  <p><strong>Space:</strong> <%=booking.space.name%></p>
+                  <p><strong>Your message:</strong> <%= booking.message %></p>
+                  <p><strong>Booking start:</strong> <%= booking.booking_start %></p>
+                  <p><strong>Booking end:</strong> <%= booking.booking_end %></p>
+                  <br>
+                  <p><strong>Contact:</strong> <%=booking.space.user.email%></p>
+                </div>
+                <div class="booking-image me-2">
+                  <%= cl_image_tag booking.space.photos.first.key %>
+                </div>
+              </div>
+
+            </div>
+          <% end %>
+        <% end %>
+
+  </div>
+
+
+
 </div>
