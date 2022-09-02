@@ -48,12 +48,13 @@ Specific CSS for your home-page
 
 
 .welcome {
-  position: absolute;
-  top: 40%;
-  left: 19%;
+  top: 30%;
   margin: 0 auto;
   z-index: 15;
   text-align: center;
+  width: auto;
+  height: auto;
+  position: relative;
 
   h1 {
     color: white;
