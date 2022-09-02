@@ -15,7 +15,7 @@ class BookingsController < ApplicationController
 
   def destroy
     @user = User.find(params[:id])
-    @booking = Booking.find_by(space_id: booking.space.id)
+    @booking = Booking.find_by(space_id: @space)
     @booking.destroy
 
     redirect_to user_path(@user), status: :see_other
