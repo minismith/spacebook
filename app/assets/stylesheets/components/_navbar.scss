@@ -67,9 +67,11 @@ input.btn{
   background-color: f4f4f4;
 }
 
-
-
-
 #searchborder{
   border: none;
+}
+
+#searchborder:hover{
+  border:2px solid grey;
+  background-color: f4f4f4;
 }
