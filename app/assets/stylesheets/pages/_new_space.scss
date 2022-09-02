@@ -12,7 +12,8 @@
 }
 
 #list_form {
-  border-radius: 2px;
+  border-radius: 7px;
+  box-shadow: 3px 3px 10px -3px lightgrey;
   background-color: white;
   display: flex;
   width: 45%;
@@ -51,7 +52,6 @@
 background-color: #85dc47;
 color: black;
 text-decoration: none;
-font-weight: 600;
 transition: 0.7s;
 border: none;
 }
