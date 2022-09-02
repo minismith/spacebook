@@ -1,9 +1,8 @@
 @import "components/address_autocomplete";
 
 #edit-form{
-  border: solid #D6E3F8 0.5px;
-  border-radius: 2px;
-  box-shadow: 0 2px 2px -2px rgba(0,0,0,.2);
+  border-radius: 7px;
+  box-shadow: 3px 3px 10px -3px lightgrey;
   background-color: white;
   display: flex;
   width: 60%;
@@ -19,13 +18,6 @@
     }
 }
 
-.edit-container h1 {
-  text-align: center;
-  margin-top: 25px;
-  font-weight: 500;
-  text-shadow: 0 2px 2px -2px rgba(0,0,0,.2); ;
-
-}
 
 .center-submit {
   text-align: center;
@@ -71,10 +63,21 @@
     margin-top: 10px;
   }
 
-  .btn-outline-dark-edit2 {
+  .btn-outline-dark-edit2:hover  {
     background-color: #85dc47;
     color: black;
     text-decoration: none;
     transition: 0.7s;
     border: none;
+  }
+
+  #edith1 {
+    text-align: center;
+    margin-top: 25px;
+    font-weight: 500;
+    text-shadow: 0 2px 2px -2px rgba(0,0,0,.2); ;
+    color: black;
+    font-family: 'Dosis', sans-serif;
+    font-size: 65px;
+    letter-spacing: 2px;
   }
