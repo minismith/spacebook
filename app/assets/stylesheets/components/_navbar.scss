@@ -34,14 +34,18 @@
   width: 50px;
 }
 
-.search-form-control{
-  float:right;
-}
+// .search-form-control{
+//   float:right;
+// }
 
 .form-control{
   width: 300px;
   background-color: white;
+  border: none;
+}
 
+input.btn{
+  margin-bottom: -6px;
 }
 
 .avatar{
@@ -53,7 +57,12 @@
   color: grey;
 }
 
-#border-gone{
-  box-shadow: none;
-  border: none;
+// #border-gone{
+//   box-shadow: none;
+//   border: none;
+// }
+
+.form-control:hover{
+  border:2px solid grey;
+  background-color: f4f4f4;
 }
