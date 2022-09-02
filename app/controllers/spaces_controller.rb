@@ -11,6 +11,11 @@ class SpacesController < ApplicationController
         image_url: helpers.asset_url("https://res.cloudinary.com/dg6mudunt/image/upload/v1662040847/marker_widycg.png")
       }
     end
+    if params[:query].present?
+      @spaces = Space.search_by_name_and_address(params[:query])
+    else
+      @spaces = Space.all
+    end
   end
 
   def new
